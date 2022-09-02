@@ -52,4 +52,4 @@ function getQuoteByID(id) {
     return IDFound;
 }
 
-app.listen(proccess.env.PORT || 5000, () => console.log(`Server running on port: http://localhost:5000`));
+app.listen(process.env.PORT || 5000, () => console.log(`Server running on port: http://localhost:5000`));

@@ -8,6 +8,20 @@ Saiba a opinião da Isabela Boscov sobre filmes, séries, atores(as) e diretores
     id:20
 ---
 ## Utilização
+Gerar citação aleatória
+```bash
+curl https://isaboscov-api.herokuapp.com/quotes/random
+```
+
+Acessar todas as citações sobre determinado assunto
+```bash
+curl https://isaboscov-api.herokuapp.com/quotes/Angelina Jolie
+```
+
+Gerar citação com base numa ID
+```bash
+curl https://isaboscov-api.herokuapp.com/quotes/id/21
+```
 
 ---
 ## Contribua

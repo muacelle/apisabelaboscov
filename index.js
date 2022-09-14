@@ -10,18 +10,13 @@ const app = express();
 app.use(bodyParser.json());
 app.use('/quotes', quotesRoutes);
 
-router.use(cors({
+app.use(cors({
     origin: '*',
     credentials: true
 }))
 
 app.get('/', (req, res) => {
     res.send('Hello from Homepage.')
-});
-
-app.all("*", function (req, res, next) {
-    res.set("Access-Control-Allow-Origin", "*");
-    next();
 });
 
 // get random quote

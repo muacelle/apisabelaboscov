@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use('/quotes', quotesRoutes);
 
-app.use(cors({
+router.use(cors({
     origin: '*',
     credentials: true
 }))
@@ -63,5 +63,17 @@ function getQuoteByID(id) {
     if (!IDFound) return ('Sorry, not found. :(')
     return IDFound;
 }
+
+//
+
+const refreshRandom = document.querySelector('.random .refresh')
+
+refreshRandom.addEventListener('click', async function newRandomQuote() {
+    let data = await fetch('https://isaboscov-api.herokuapp.com/quotes/random');
+    let result = await data.json();
+    console.log(result);
+})
+
+//
 
 app.listen(process.env.PORT || 5000, () => console.log(`Server running on port: http://localhost:5000`));

@@ -13,9 +13,17 @@ app.use(cors({
 }))
 
 app.use(express.static('public'));
+
+// homepage
 app.get('/', (req, res) => {
     res.sendFile('public/index.html');
 });
+
+// all quotes
+
+app.get('/quotes', (req, res) => {
+    res.send(quotes);
+})
 
 // get random quote
 
@@ -24,7 +32,7 @@ app.get('/quotes/random', (req, res) => {
 })
 
 function getRandom() {
-    let index = Math.floor(Math.random() * (quotes.length - 1))
+    let index = Math.floor(Math.random() * (quotes.length))
     return quotes[index]
 }
 

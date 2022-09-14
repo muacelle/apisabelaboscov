@@ -1,13 +1,20 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import quotesRoutes from './routes/quotes.js';
-import quotes from "./quotes-list.js"
+import quotes from "./quotes-list.js";
 import router from './routes/quotes.js';
+import cors from 'cors';
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use('/quotes', quotesRoutes);
+
+app.use(cors({
+    origin: '*',
+    credentials: true
+}))
+
 app.get('/', (req, res) => {
     res.send('Hello from Homepage.')
 });

@@ -19,6 +19,11 @@ app.get('/', (req, res) => {
     res.send('Hello from Homepage.')
 });
 
+app.all("*", function (req, res, next) {
+    res.set("Access-Control-Allow-Origin", "*");
+    next();
+});
+
 // get random quote
 
 router.get('/random', (req, res) => {

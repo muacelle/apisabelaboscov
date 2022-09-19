@@ -77,3 +77,20 @@ body {
 .fa-square-twitter {
     color: #25abe1;
 }
+
+@media all and (max-width: 400px) {
+    .container {
+        width: 88%;
+        margin: 10px auto;
+    }
+    .endpoint {
+        flex-direction: column;
+    }
+    .refresh {
+        width: fit-content;
+        margin-top: 8px;
+    }
+    .quotes {
+        gap: 25px;
+    }
+}

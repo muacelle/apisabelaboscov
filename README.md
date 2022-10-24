@@ -1,4 +1,6 @@
 # Isabela Boscov API
+https://apisabelaboscov.herokuapp.com/
+
 Saiba a opinião da Isabela Boscov sobre filmes, séries, atores(as) e diretores(as). Gere citações aleatórias ou específicas.
 
 ---

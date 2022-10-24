@@ -22,6 +22,3 @@ Gerar citação com base numa ID
 ```bash
 curl https://apisabelaboscov.herokuapp.com/quotes/id/21
 ```
-
----
-## Contribua
